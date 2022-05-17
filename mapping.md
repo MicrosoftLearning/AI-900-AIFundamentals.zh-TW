@@ -1,20 +1,28 @@
-﻿# AI-900 訓練人員實驗室對應
+---
+ms.openlocfilehash: 69f8fd8920fccc0aecc4fb5d5a40e506935f8340
+ms.sourcegitcommit: 276908bd75615fb4d4712b912426129587e9c307
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "140788218"
+---
+# <a name="ai-900-trainer-lab-mapping"></a>AI-900 訓練人員實驗室對應
 
-AI-900 課程：AI Fundamentals 有一個實驗室子集指定用於導學型訓練，適合為期一天的課程。
+AI-900 課程：「AI 基本概念」有一個實驗室子集指定用於導學型訓練，適合為期 1 天的課程採用。
 
-AI-900 訓練人員實驗室是 AI-900 實驗室的子集 (01-11)，取自 [AI-900 實驗室存放庫](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals)。
+AI-900 訓練人員實驗室是可在 Microsoft Learn 上找到的 AI-900 實驗室子集。
 
-> 備註：講師在教學時可能選擇從所有 AI-900 實驗室 (01-11) 集群中新增額外的實驗室到他們的課程模組中。
+> 注意：教學時，講師可選擇從所有 AI-900 實驗室集合中，新增額外的實驗室到他們的課程模組。
 
-## AI-900 課程模組對應到實驗室
+## <a name="ai-900-module-mapping-to-labs"></a>AI-900 課程模組對應到實驗室
 
 AI-900 實驗室子集用於按照每個課程模組對應的課程，如下所示： 
 
-| AI-900 訓練人員實驗室 # | 主題 | Markdown 檔案 |
+| AI-900 訓練人員實驗室 # | 主題 | Instructions |
 | --- | --- | --- |
-| 01：AI-900 課程模組 01 | 開始使用 Azure 上的人工智慧 | [00 - 開始在 Azure 上使用 AI.md](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals/tree/master/Instructions/00%20-%20Get%20started%20with%20AI%20on%20Azure.md) |
-| 02：AI-900 課程模組 02 | 在 Azure Machine Learning 中使用自動化機器學習 | [00a-自動化-機器-學習.md](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals/tree/master/Instructions/00a-automated-machine-learning.md) |
-| 03：AI-900 課程模組 03 | 影像分類  | [02-實驗室-指示.md](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals/tree/master/Instructions/02-lab-Instructions.md) |
-| 04：AI-900 課程模組 04 | 語言理解 | [10-實驗室-指示.md](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals/tree/master/Instructions/10-lab-Instructions.md) |
-| 05：AI-900 課程模組 05 | QnA Bot | [11-lab-Instructions.md](https://github.com/MicrosoftLearning/AI-900TW-Microsoft-Azure-AI-Fundamentals/tree/master/Instructions/11-lab-Instructions.md) |
+| 01：AI-900 課程模組 01 | 探索認知服務 | [01-Lab-Instructions](https://aka.ms/ai900-module-01) |
+| 02：AI-900 課程模組 02 | 探索自動化機器學習 | [02-Lab-Instructions](https://aka.ms/ai900-module-02) |
+| 03：AI-900 課程模組 03 | 使用電腦視覺分析影像  | [03-Lab-Instructions](https://aka.ms/ai900-module-03) |
+| 04：AI-900 課程模組 04 | 使用語言服務分析文字 | [04-Lab-Instructions](https://aka.ms/ai900-module-04) |
+
 

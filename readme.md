@@ -1,33 +1,45 @@
-﻿# Microsoft Azure AI Fundamentals 練習
+---
+ms.openlocfilehash: 5e30b50971446e2da8383a94557380ede431b7c9
+ms.sourcegitcommit: a01e0cfb657c6628e71e3e2d981b6f19bde0ed89
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "138099869"
+---
+# <a name="microsoft-azure-ai-fundamentals-exercises"></a>Microsoft Azure AI Fundamentals 練習
 
-此存放庫包含適用於 Microsoft 課程的實作教室練習 [AI-900 *Microsoft Azure AI Fundamentals*](https://docs.microsoft.com/zh-tw/learn/certifications/courses/ai-900t00) 和 [Microsoft Learn 自學型課程模組](https://docs.microsoft.com/learn/certifications/azure-ai-fundamentals)。這些實驗室是為了配合學習材料並讓您使用其描述的技術進行練習而設計。 
+此存放庫包含適用於 Microsoft 課程的實作教室練習 [AI-900 *Microsoft Azure AI 基本概念*](https://docs.microsoft.com/en-us/learn/certifications/courses/ai-900t00)和 [Microsoft Learn 自學型課程模組](https://docs.microsoft.com/learn/certifications/azure-ai-fundamentals)。 這些實驗室旨在配合學習教材，讓您能夠使用其中描述的技術來練習。 
 
-## 我們在做什麼？
+- **[下載最新摸摸學員手冊和 AllFiles 內容](../../releases/latest)**
+- **您是 MCT 嗎？** 請參閱我們專為 MCT 準備的 [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/) (適用於 MCT 的 GitHub 使用者指南)
+- **需要手動建立實驗室指示嗎？** - [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) 存放庫中備有指示
 
-- 為支援此課程，我們將需要經常更新課程內容以使其與課程中使用的 Azure 服務保持同步更新。  我們在 GitHub 上發佈實驗室指示和實驗室檔案，允許開放課程作者和 MCT 之間的參與，從而使內容和 Azure 平台中的變更保持同步更新。
+## <a name="what-are-we-doing"></a>我們要做什麼？
 
-- 我們希望這樣能為實驗室帶來一種前所未有的共同作業感，當 Azure 變更並且您首次透過即時傳遞發現它時，繼續並在實驗室來源中進行增強。  幫助您的夥伴 MCT。
+- 為支援此課程，我們將不斷更新課程內容，以保留目前用於該課程的 Azure 服務。  我們會在 GitHub 上發佈實驗室指示和實驗室檔案，讓課程製作者和 MCT 之間能開放貢獻的資訊，以保持課程內容與 Azure 平台的變化相符。
 
-## 我應該怎樣使用這些與已發行的 MOC 檔案相關的檔案？
+- 我們希望透過此方式提倡實驗室的合作精神，若您在現場授課時發現 Azure 有所變更，歡迎您直接在實驗室來源中加以改進。  幫助您的 MCT 同業。
 
-- 此講師手冊和 PowerPoints 仍將作為您教學課程內容的主要來源。
+## <a name="how-should-i-use-these-files-relative-to-the-released-moc-files"></a>我該如何使用與相對於已釋放的 MOC 檔案之這些檔案？
 
-- GitHub 上的這些檔案設計用於與學生手冊結合，但在 GitHub 中則作為中央存放庫，因此 MCT 和課程作者可以共用最新實驗室檔案的來源。
+- 講師手冊和 PowerPoints 仍然會成為您教導課程內容的主要來源。
 
-- 建議每次傳遞時，訓練人員檢查 GitHub 來了解為支援最新 Azure 服務而可能進行的任何變更，並為其傳遞獲取最新檔案。
+- GitHub 上的這些檔案是為了與學生手冊搭配使用所設計，但這些檔案在 GitHub 上會作為中央存放庫，讓 MCT 和課程製作者可以共用最新的實驗室檔案來源。
 
-## 學生手冊有什麼變更？
+- 建議訓練師每次授課時檢查 GitHub 所做任何變更，以支援最新的 Azure 服務，並在他們授課時獲得最新檔案。
 
-- 我們將按季度檢閱學生手冊並根據需要透過標準 MOC 發行頻道更新。
+## <a name="what-about-changes-to-the-student-handbook"></a>那對學生手冊的改動呢？
 
-## 我要怎樣參與？
+- 我們將每季審查一次學生手冊，並視需要透過常規的 MOC 發佈管道加以更新。
 
-- 任何 MCT 都能向 GitHub 存放庫中的程式碼或內容提交提取要求，Microsoft 和課程作者將根據需要分級並包含內容和實驗室程式碼更改。
+## <a name="how-do-i-contribute"></a>我要怎麼參與？
+
+- 任何 MCT 都可以向 GitHub 存放庫中的程式碼或內容提交提取請求，Microsoft 和課程作者將根據需要分類並包括內容和實驗室程式碼變更。
 
 - 若您有建議或發現任何錯誤，請[報告它](https://docs.microsoft.com/learn/support/troubleshooting#report-feedback)。
 
-## 備註 
+## <a name="notes"></a>備註 
 
-### 教室材料
+### <a name="classroom-materials"></a>教室教材
 
-強烈建議 MCT 和合作夥伴存取這些材料並按順序將他們分別提供給學生。  將學生直接指向 GitHub，以便存取實驗室步驟作為進行中的課程的一部分，這樣會要求學生存取其他 UI 作為課程的一部分，給學生帶來混淆不清的體驗。向學生說明，為什麼他們接收分離的實驗室指示能夠醒目提示不斷變更的雲端式介面和平台的本質。Microsoft Learning 為在 GitHub 上存取檔案提供支援並為 GitHub 網站的導覽提供支援，這些支援僅限於教學此課程的 MCT。
+強烈建議 MCT 和合作夥伴存取這些教材，再個別提供給學生。  在課程進行時，若將學生直接導向 GitHub 來存取實驗室步驟，學生將需要在過程中存取其他 UI，這會使學生感到混淆。 向學生解釋他們收到單獨實驗室指示的原因，可突顯出雲端式介面和平台不斷變化的本質。 Microsoft Learning 對 GitHub 檔案的存取支援和 GitHub 網站的瀏覽支援，僅提供給教授本課程的 MCT 使用。
