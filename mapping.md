@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 69f8fd8920fccc0aecc4fb5d5a40e506935f8340
-ms.sourcegitcommit: 276908bd75615fb4d4712b912426129587e9c307
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "140788218"
----
 # <a name="ai-900-trainer-lab-mapping"></a>AI-900 訓練人員實驗室對應
 
 AI-900 課程：「AI 基本概念」有一個實驗室子集指定用於導學型訓練，適合為期 1 天的課程採用。
