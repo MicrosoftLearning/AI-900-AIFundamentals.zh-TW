@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 4e00e832d02871de3fa4511273434b6e8db58df3
-ms.sourcegitcommit: 71edd7d093464547be5a87725ef67dad082aafbf
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "147629847"
----
 # <a name="ai-900-microsoft-azure-ai-fundamentals"></a>AI-900：Microsoft Azure AI 基本概念
 
 此存放庫包含適用於 Microsoft 課程的實作教室練習 [AI-900 *Microsoft Azure AI 基本概念*](https://docs.microsoft.com/en-us/learn/certifications/courses/ai-900t00)和 [Microsoft Learn 自學型課程模組](https://docs.microsoft.com/learn/certifications/azure-ai-fundamentals)。 這些實驗室旨在配合學習教材，讓您能夠使用其中描述的技術來練習。 
