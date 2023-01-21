@@ -11,7 +11,7 @@ lab:
 
 1. 使用您的 Microsoft 登入資訊登入 [Azure 入口網站](https://portal.azure.com?azure-portal=true)。
 
-1. 選取 [+ 建立資源] ，搜尋 *Machine Learning*，然後使用 *Azure Machine Learning* 方案建立新的 **Azure Machine Learning** 資源。 套用下列設定： 
+1. 選取 [+ 建立資源] ，搜尋 Machine Learning，然後使用 *Azure Machine Learning* 方案建立新的 **Azure Machine Learning** 資源。 套用下列設定： 
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：建立或選取資源群組。
     - **工作區名稱**：為您的工作區輸入唯一名稱。

@@ -206,7 +206,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
 ## <a name="run-the-training-pipeline"></a>執行訓練管線
 
-現在您已準備就緒，可執行定型管線並定型模型。
+現在您已準備就緒，可執行訓練管線並定型模型。
 
 1. 選取 [提交]，然後使用名為 **mslearn-auto-training** 的現有實驗執行管線。
 
