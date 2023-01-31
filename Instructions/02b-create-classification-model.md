@@ -124,11 +124,13 @@ lab:
 
 1. 在左側的 [資產庫] 窗格中，按一下 [元件]，其中包含您可以用於資料轉換和模型定型的各種模組。 您也可以使用搜尋列快速找到模組。
 
-    ![設計工具資產庫、搜尋列及元件圖示位置的螢幕擷取畫面。](media/create-classification-model/designer-asset-library-components.png)
+    ![設計工具資產庫、搜尋列和元件圖示位置的螢幕擷取畫面。](media/create-classification-model/designer-asset-library-components.png)
 
-1. 尋找 [正規化資料] 模組，並將其放在位於 [diabetes-data] 資料集下方的畫布上。 然後，將 **diabetes-data**資料集底部的輸出連線至 [正規化資料] 模組頂端的輸入，如下所示：
+1. 尋找 [選取資料集中的資料行] 模組，並將其放在 **diabetes-data** 資料集下方的畫布上。 然後，將 **diabetes-data** 資料集底部的輸出連線至 [選取資料集中的資料行] 模組頂端的輸入。
 
-    ![螢幕擷取畫面顯示資料集已連線至正規化資料模組的管道。](media/create-classification-model/dataset-normalize.png)
+1. 尋找 [正規化資料] 模組，並將其放在 [選取資料集中的資料行] 模組下方的畫布上。 然後，將 [選取資料集中的資料行] 模組底部的輸出連線至 [正規化資料]  模組頂端的輸入，如下所示：
+
+    ![螢幕擷取畫面：資料集已連線至 [正規化資料] 模組的管道。](media/create-classification-model/dataset-normalize.png)
 
 1. 按兩下 [正規化資料] 模組以檢視其設定。請注意，您必須指定轉換方法和要進行轉換的資料行。 
 
@@ -277,6 +279,7 @@ lab:
     
     - 針對要提交的新資料，新增 **Web 服務輸入**元件。
     - 將 **diabetes-data** 資料集取代為 [手動輸入資料] 模組，其中未包含標籤資料行 (**糖尿病**)。
+    - 編輯 [選取資料集中的資料行] 模組中選取的資料行。
     - 移除 [評估模型] 模組。
     - 在 Web 服務輸出前面插入 [執行 Python 指令碼] 模組，而僅傳回患者識別碼、預測的標籤值及機率。
 
@@ -293,6 +296,8 @@ lab:
 
 1. 將新的 [手動輸入資料] 模組連線至相同 [套用轉換] 模組的 [資料集] 輸入，作為 [Web 服務輸入]。
 
+1. 編輯 [選取資料集中的資料行] 模組。 從「選取的資料行」中移除**糖尿病**。 
+
 1. 推斷管線納入的 [評估模型] 模組並不適用於新資料預測，因此請刪除此模組。
 
 1. [評分模型] 模組的輸出包含所有輸入特徵，以及預測的標籤和機率分數。 若要將輸出限定於預測和機率：
@@ -304,7 +309,7 @@ import pandas as pd
 
 def azureml_main(dataframe1 = None, dataframe2 = None):
 
-    scored_results = dataframe1[['PatientID', 'Scored Labels', 'Scored Probabilities']]
+    scored_results = dataframe1[['Scored Labels', 'Scored Probabilities']]
     scored_results.rename(columns={'Scored Labels':'DiabetesPrediction',
                                 'Scored Probabilities':'Probability'},
                         inplace=True)
