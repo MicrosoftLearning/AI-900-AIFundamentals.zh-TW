@@ -1,6 +1,7 @@
 ---
 lab:
   title: 探索翻譯
+  module: Module 4 - Natural Language Processing (NLP)
 ---
 
 # <a name="explore-translation"></a>探索翻譯

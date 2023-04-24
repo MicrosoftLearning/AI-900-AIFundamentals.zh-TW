@@ -1,6 +1,7 @@
 ---
 lab:
   title: 探索知識採礦
+  module: Module 5 - Conversational AI
 ---
 
 # <a name="explore-knowledge-mining"></a>探索知識採礦

@@ -1,6 +1,7 @@
 ---
 lab:
   title: 探索語言理解
+  module: Module 4 - Natural Language Processing (NLP)
 ---
 
 # <a name="explore-language-understanding"></a>探索語言理解

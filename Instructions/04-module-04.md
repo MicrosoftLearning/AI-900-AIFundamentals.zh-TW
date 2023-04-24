@@ -1,6 +1,7 @@
 ---
 lab:
   title: 探索文字分析
+  module: Module 4 - Natural Language Processing (NLP)
 ---
 
 # <a name="explore-text-analytics"></a>探索文字分析

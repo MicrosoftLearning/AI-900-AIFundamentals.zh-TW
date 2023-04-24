@@ -1,6 +1,7 @@
 ---
 lab:
   title: 使用 Azure Machine Learning 設計工具探索分類
+  module: Module 2 - Machine Learning
 ---
 
 # <a name="explore-classification-with-azure-machine-learning-designer"></a>使用 Azure Machine Learning 設計工具探索分類
