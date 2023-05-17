@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索光學字元辨識
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-optical-character-recognition"></a>探索光學字元辨識

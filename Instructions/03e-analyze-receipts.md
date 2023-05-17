@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索表單辨識
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-form-recognition"></a>探索表單辨識

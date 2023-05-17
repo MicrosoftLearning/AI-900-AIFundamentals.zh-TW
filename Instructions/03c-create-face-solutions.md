@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索臉部辨識
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-face-recognition"></a>探索臉部辨識

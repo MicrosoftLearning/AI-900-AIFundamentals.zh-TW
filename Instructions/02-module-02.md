@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索 Azure ML 中的自動化機器學習
-  module: Module 2 - Machine Learning
 ---
 
 # <a name="explore-automated-machine-learning-in-azure-ml"></a>探索 Azure ML 中的自動化機器學習

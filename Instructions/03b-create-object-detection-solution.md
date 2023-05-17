@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索物件偵測
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-object-detection"></a>探索物件偵測

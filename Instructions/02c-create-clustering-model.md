@@ -1,7 +1,6 @@
 ---
 lab:
   title: 使用 Azure Machine Learning 設計工具探索叢集
-  module: Module 2 - Machine Learning
 ---
 
 # <a name="explore-clustering-with-azure-machine-learning-designer"></a>使用 Azure Machine Learning 設計工具探索叢集

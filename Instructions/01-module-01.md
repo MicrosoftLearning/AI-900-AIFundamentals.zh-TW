@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索認知服務
-  module: Module 1 - Introduction to AI
 ---
 
 # <a name="explore-cognitive-services"></a>探索認知服務

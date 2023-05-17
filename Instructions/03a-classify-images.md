@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索影像分類
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-image-classification"></a>探索影像分類

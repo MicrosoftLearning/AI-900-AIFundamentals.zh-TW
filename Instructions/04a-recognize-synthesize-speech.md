@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索語音
-  module: Module 4 - Natural Language Processing (NLP)
 ---
 
 # <a name="explore-speech"></a>探索語音

@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索問題解答
-  module: Module 4 - Natural Language Processing (NLP)
 ---
 
 # <a name="explore-question-answering"></a>探索問題解答

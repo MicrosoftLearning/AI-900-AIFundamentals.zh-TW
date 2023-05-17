@@ -1,7 +1,6 @@
 ---
 lab:
   title: 探索電腦視覺
-  module: Module 3 - Computer Vision
 ---
 
 # <a name="explore-computer-vision"></a>探索電腦視覺
