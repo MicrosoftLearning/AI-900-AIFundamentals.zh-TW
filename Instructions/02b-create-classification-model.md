@@ -3,11 +3,11 @@ lab:
   title: 使用 Azure Machine Learning 設計工具探索分類
 ---
 
-# <a name="explore-classification-with-azure-machine-learning-designer"></a>使用 Azure Machine Learning 設計工具探索分類
+# 使用 Azure Machine Learning 設計工具探索分類
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
-## <a name="create-an-azure-machine-learning-workspace"></a>建立 Azure Machine Learning 工作區  
+## 建立 Azure Machine Learning 工作區  
 
 1. 使用您的 Microsoft 登入資訊登入 [Azure 入口網站](https://portal.azure.com?azure-portal=true)。
 
@@ -25,13 +25,13 @@ lab:
 
 1. 選取 [啟動工作室] (或開啟新的瀏覽器索引標籤，並瀏覽至 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然後使用您的 Microsoft 帳戶登入 Azure Machine Learning 工作室)。
 
-1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 否則，請按一下左側功能表上的 [Microsoft]。 然後，從新的左側功能表中選取 [工作區]，其中會列出與您的訂用帳戶相關聯的所有工作區。 選擇您為此練習建立的工作區。 
+1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 如果不是這種情況，請在左側功能表中選取您的 Azure 目錄。 然後，從新的左側功能表中選取 [ **工作區**]，其中會列出與您目錄相關聯的所有工作區，然後選取您為此練習建立的工作區。
 
 > **注意** 這是眾多利用 Azure Machine Learning 工作區的課程模組之一，包括 [Microsoft Azure AI 基本概念：探索機器學習的視覺工具](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/)學習路徑中的其他課程模組。 如果您使用的是您個人的 Azure 訂用帳戶，請考慮建立工作區一次，然後在其他模組中重複使用該工作區。 只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您的 Azure 訂用帳戶就會為了資料儲存空間向您收取少量的費用，因此我們建議當您不再需要 Azure Machine Learning 工作區時，將其刪除。
 
-## <a name="create-compute"></a>建立計算
+## 建立計算
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取左上方的三條線，以檢視介面中各個頁面 (您可能需要將畫面放到最大)。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取 **&#8801;圖示 (** 一個功能表圖示，其看起來像左上方三行) 堆疊，以檢視介面中的各種頁面， (您可能需要將螢幕大小最大化) 。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
 
 1. 在 [計算] 頁面上，選取 [計算叢集] 索引標籤，然後使用下列設定新增計算叢集。 您將使用此計算叢集來定型機器學習模型：
     - **位置**：選取與您的工作區相同的位置。如果未列出該位置，請選擇最接近您的位置。
@@ -52,11 +52,11 @@ lab:
 
 建立計算叢集需要一些時間。 您可以在等待期間先移至下一個步驟。
 
-## <a name="create-a-pipeline-in-designer"></a>在設計工具中建立管線
+## 在設計工具中建立管線
 
 若要開始使用 Azure Machine Learning 設計工具，您必須先建立管線，並新增您要使用的資料集。
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線來展開左窗格。 檢視 [設計工具] 頁面 (在 [作者] 下)，然後選取 **+** 來建立新的管線。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，展開左窗格。 檢視 [設計工具] 頁面 (在 [作者] 下)，然後選取 **+** 來建立新的管線。
 
 1. 在畫面右上方選取 [設定]。 如果看不到 [設定] 窗格，請選取頂端管線名稱旁邊的轉輪圖示。
 
@@ -68,9 +68,9 @@ lab:
 
     ![Machine Learning 工作室 [設定] 窗格的螢幕擷取畫面。](media/create-classification-model/create-pipeline-help.png)
 
-## <a name="create-a-dataset"></a>建立資料集
+## 建立資料集
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線來展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
 
 1. 在 [資料] 頁面的 [資料資產] 索引標籤下，選取 [建立]。 然後使用下列設定來設定資料資產：
     * **資料類型**：
@@ -96,7 +96,7 @@ lab:
 
 1. 建立資料集之後，請將其開啟，並檢視 [探索] 頁面，以查看資料的範例。 此資料代表患者的詳細資料，這些患者已接受糖尿病檢測。
 
-### <a name="load-data-to-canvas"></a>將資料載入畫布
+### 將資料載入畫布
 
 1. 選取左側功能表上的 [設計工具]，以返回您的管線。 在 [設計工具] 頁面上，選取 [Diabetes Training] 管線。
 
@@ -118,7 +118,7 @@ lab:
 
     ![螢幕擷取畫面顯示設計工具畫布上的 diabetes-data 資料集。](media/create-classification-model/diabetes-data.png)
 
-## <a name="add-transformations"></a>新增轉換
+## 新增轉換
 
 您通常必須先對資料套用一些前置處理轉換，才能將模型定型。
 
@@ -128,27 +128,26 @@ lab:
 
 1. 尋找 [選取資料集中的資料行] 模組，並將其放在 **diabetes-data** 資料集下方的畫布上。 然後，將 **diabetes-data** 資料集底部的輸出連線至 [選取資料集中的資料行] 模組頂端的輸入。
 
+1. 按兩下 [選取資料集的資料行] 模組，以存取右側的設定窗格。 選取 [編輯資料行]。 然後在 [ **選取資料行]** 視窗中，選取 [ **依名稱** ] 和 [ **新增所有資料** 行]。 然後移除 **PatientID** ，然後按一下 [ **儲存**]。 
+
 1. 尋找 [正規化資料] 模組，並將其放在 [選取資料集中的資料行] 模組下方的畫布上。 然後，將 [選取資料集中的資料行] 模組底部的輸出連線至 [正規化資料]  模組頂端的輸入，如下所示：
 
     ![螢幕擷取畫面：資料集已連線至 [正規化資料] 模組的管道。](media/create-classification-model/dataset-normalize.png)
 
 1. 按兩下 [正規化資料] 模組以檢視其設定。請注意，您必須指定轉換方法和要進行轉換的資料行。 
 
-1. 將 [轉換方法] 設定為 **MinMax**，並將 [檢查時常數資料行使用 0] 設定為 **True**。 編輯資料行，以依名稱包含下列資料行，如下圖所示：
-    - **Pregnancies**
-    - **PlasmaGlucose**
-    - **DiastolicBloodPressure**
-    - **TricepsThickness**
-    - **SerumInsulin**
-    - **BMI**
-    - **DiabetesPedigree**
-    - **年齡**
+1. 將 [轉換方法] 設定為 **MinMax**，並將 [檢查時常數資料行使用 0] 設定為 **True**。 使用 **[編輯**資料行] 編輯要轉換的資料行。 選取 **[具有規則** 的資料行]，然後複製下列清單，並貼到 [包含資料行名稱] 底下：  
 
-    ![針對正規化選取的資料行螢幕擷取畫面。](media/create-classification-model/normalize-data.png)
+```
+Pregnancies, PlasmaGlucose, DiastolicBloodPressure, TricepsThickness, SerumInsulin, BMI, DiabetesPedigree, Age
+```
+![針對正規化選取的資料行螢幕擷取畫面。](media/create-classification-model/normalize-data.png)
+
+按一下 [ **儲存** ] 並關閉選取方塊。 
 
 資料轉換會將數值資料行正規化，使其處於相同的規模，這應該有助於防止具有大數值的資料行主導模型定型。 您通常會套用如同此作業一般的一系列前置處理轉換，為您的資料進行定型的準備，但在本練習中，我們會將內容簡化。
 
-## <a name="run-the-pipeline"></a>執行管道
+## 執行管道
 
 若要套用資料轉換，您必須以實驗形式執行管線。
 
@@ -160,7 +159,7 @@ lab:
 
     請注意，左側面板現在位於 [提交的作業] 窗格上。 您將知道執行何時完成，因為作業的狀態會變更為 [已完成]。
 
-## <a name="view-the-transformed-data"></a>檢視轉換的資料
+## 檢視轉換的資料
 
 1. 當執行完成時，資料集現在已準備好進行模型定型。 按一下 [作業詳細資料]。 您會移至新的索引標籤。
 
@@ -172,7 +171,7 @@ lab:
 
 使用資料轉換準備資料之後，即可使用此資料來定型機器學習模型。
 
-## <a name="add-training-modules"></a>新增定型模組
+## 新增定型模組
 
 常見做法是使用資料的子集來定型模型，同時保留一些資料用以測試定型的模型。 這可讓您將模型所預測的標籤與原始資料集中實際的已知標籤進行比較。
 
@@ -207,7 +206,7 @@ lab:
 
 1. 在 [資產庫] 中，搜尋**評分模型**模組並置在畫布上的 [定型模組] 模組下方。 然後，將 [定型模型] 模組的輸出連線至 [評分模型] 模組的 [定型模型]  (左側) 輸入，並將 [分割資料] 模組的 [結果資料集 2]  (右側) 輸出連線至 [評分模型] 模組的 [資料集]  (右側) 輸入。
 
-## <a name="run-the-training-pipeline"></a>執行訓練管線
+## 執行訓練管線
 
 現在您已準備就緒，可執行訓練管線並定型模型。
 
@@ -227,7 +226,7 @@ lab:
 
 您保留並用於對模型進行評分的驗證資料，包含標籤的已知值。 因此，若要驗證模型，您可以比較標籤的實際值與您為驗證資料集評分時所預測的標籤值。 根據這項比較，您可以計算各種計量，其中說明模型的執行效能。
 
-## <a name="add-an-evaluate-model-module"></a>新增評估模型模組
+## 新增評估模型模組
 
 1. 開啟您已建立的 **Diabetes Training** 管線。
 
@@ -261,9 +260,9 @@ lab:
 
 此模型的效能不盡理想，部分原因是我們僅執行了最低限度的特徵工程和前置處理。 您可以嘗試不同的分類演算法 (例如**二級決策樹系**)，並比較該結果。 您可以將 [分割資料] 模組的輸出連線至多個 [定型模型] 和 [評分模型] 模組，也可以再將另一個 [評分模型] 模組連線至 [評估模型] 模組，以兩相比較。 本練習的重點是為您介紹分類和 Azure Machine Learning 設計工具介面，而不是定型完美的模型！
 
-## <a name="create-an-inference-pipeline"></a>建立推斷管線
+## 建立推斷管線
 
-1. 在 Azure Machine Learning 工作室中，選取畫面左上方的三條線，以展開左側窗格。 按一下 [作業]  (在 [資產] 下方) 以檢視您已執行的所有作業。 選取 [mslearn-diabetes-training]實驗，然後選取 [Diabetes Training] 管線。
+1. 在Azure Machine Learning 工作室中，選取畫面左上方的功能表圖示，以展開左側窗格。 按一下 [作業]  (在 [資產] 下方) 以檢視您已執行的所有作業。 選取 [mslearn-diabetes-training]實驗，然後選取 [Diabetes Training] 管線。
 
 1. 瀏覽至畫布上方的功能表，並按一下 [建立推斷管線]。 您可能需要將畫面展開為全螢幕，並按一下畫面右上角的三個點圖示 [...] ，以在功能表中找到 [建立推斷管線]。  
 
@@ -283,7 +282,7 @@ lab:
     - 移除 [評估模型] 模組。
     - 在 Web 服務輸出前面插入 [執行 Python 指令碼] 模組，而僅傳回患者識別碼、預測的標籤值及機率。
 
-1. 針對從自訂資料集建立的模型，管線不會自動包含 **Web 服務輸入**元件。 從資產庫搜尋 **Web 服務輸入**元件，並放在管線頂端。 將 [Web 服務輸入] 元件的輸出，連線至已在畫布上的 [套用轉換] 元件的右側輸入。
+1. 針對從自訂資料集建立的模型，管線不會自動包含 **Web 服務輸入**元件。 從資產庫搜尋 **Web 服務輸入**元件，並放在管線頂端。 將 **Web 服務輸入** 元件的輸出連接到畫布上已經位於畫布上的 [ **選取資料集中的資料行]** 元件。
 
 1. 推斷管線假設新資料會符合原始定型資料的結構描述，因此會包含來自訓練管線的 **diabetes-data** 資料集。 不過，此輸入資料包含模型所預測的 [糖尿病] 標籤，而不會納入尚未進行糖尿病預測的新患者資料。 請刪除此模組，並取代為 [手動輸入資料] 模組，其中下列 CSV 資料所含的三個新患者觀測值特徵值未附有標籤：
 
@@ -294,7 +293,7 @@ lab:
     1228510,4,115,50,29,243,34.69215364,0.741159926,59
     ```
 
-1. 將新的 [手動輸入資料] 模組連線至相同 [套用轉換] 模組的 [資料集] 輸入，作為 [Web 服務輸入]。
+1. 將新的**輸入資料手動**模組連接到與**Web 服務輸入**相同的 [**選取資料集中的資料行] 模組的資料集**輸入。** **
 
 1. 編輯 [選取資料集中的資料行] 模組。 從「選取的資料行」中移除**糖尿病**。 
 
@@ -332,7 +331,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
 > **注意** 在此練習中，您會將 Web 服務部署至 Azure 容器執行個體 (ACI)。 此類型的計算是動態建立的，而且適用於開發及測試。 針對生產環境，您應該建立*推斷叢集*，該叢集可提供更佳可擴縮性與安全性的 Azure Kubernetes Service (AKS) 叢集。
 
-## <a name="deploy-a-service"></a>部署服務
+## 部署服務
 
 1. 檢視您在上一個單元中建立的 **Predict Diabetes** 推斷管線。
 
@@ -351,7 +350,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
 1. 等待系統部署 Web 服務 - 這可能需要幾分鐘的時間。 部署狀態會顯示在設計工具介面的左上方。
 
-## <a name="test-the-service"></a>測試服務
+## 測試服務
 
 1. 在 [端點] 頁面中，開啟 [predict-diabetes] 即時端點。
 
@@ -387,15 +386,15 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
     您已測試使用 [取用] 索引標籤中的認證、可供連線至用戶端應用程式的服務。實驗室到此結束。 歡迎繼續使用您剛才部署的服務進行更多試驗。
 
-## <a name="clean-up"></a>清除
+## 清除
 
-您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果您不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。
+您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果您不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應該刪除計算叢集。
 
 1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)的 [端點] 索引標籤上，選取 **predict-diabetes** 端點。 然後，選取 [刪除] ，並確認您想要刪除該端點。
 
 1. 在 [計算] 頁面的 [計算叢集]  索引標籤上，選取計算叢集，然後選取 [刪除]。
 
->**注意** 停止您的計算可確保您的訂用帳戶不需支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
+>**注意** 刪除計算可確保您的訂用帳戶不會支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
 >
 > 若要刪除您的工作區：
 >

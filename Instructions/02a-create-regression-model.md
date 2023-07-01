@@ -3,13 +3,13 @@ lab:
   title: 使用 Azure Machine Learning 設計工具探索迴歸
 ---
 
-# <a name="explore-regression-with-azure-machine-learning-designer"></a>使用 Azure Machine Learning 設計工具探索迴歸
+# 使用 Azure Machine Learning 設計工具探索迴歸
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
 在此練習中，您會定型迴歸模型，以根據特性預測汽車的價格。
 
-## <a name="create-an-azure-machine-learning-workspace"></a>建立 Azure Machine Learning 工作區  
+## 建立 Azure Machine Learning 工作區  
 
 1. 使用您的 Microsoft 登入資訊登入 [Azure 入口網站](https://portal.azure.com?azure-portal=true)。
 
@@ -27,13 +27,13 @@ lab:
 
 1. 選取 [啟動工作室] (或開啟新的瀏覽器索引標籤，並瀏覽至 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然後使用您的 Microsoft 帳戶登入 Azure Machine Learning 工作室)。
 
-1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 否則，請按一下左側功能表上的 [Microsoft]。 然後，從新的左側功能表中選取 [工作區]，其中會列出與您的訂用帳戶相關聯的所有工作區。 選擇您為此練習建立的工作區。 
+1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 如果不是這種情況，請在左側功能表中選取您的 Azure 目錄。 然後，從新的左側功能表中選取 [ **工作區**]，其中會列出與您目錄相關聯的所有工作區，然後選取您為此練習建立的工作區。
 
 > **注意** 這是眾多利用 Azure Machine Learning 工作區的課程模組之一，包括 [Microsoft Azure AI 基本概念：探索機器學習的視覺工具](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/)學習路徑中的其他課程模組。 如果您使用的是您個人的 Azure 訂用帳戶，請考慮建立工作區一次，然後在其他模組中重複使用該工作區。 只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您的 Azure 訂用帳戶就會為了資料儲存空間向您收取少量的費用，因此我們建議當您不再需要 Azure Machine Learning 工作區時，將其刪除。
 
-## <a name="create-compute"></a>建立計算
+## 建立計算
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取左上方的三條線，以檢視介面中各個頁面 (您可能需要將畫面放到最大)。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取 **&#8801;圖示 (** 一個功能表圖示，其看起來像左上方三行) 堆疊，以檢視介面中的各種頁面， (您可能需要將螢幕大小最大化) 。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
 
 1. 在 [計算] 頁面上，選取 [計算叢集] 索引標籤，然後使用下列設定新增計算叢集，以定型機器學習模型：
     - **位置**：選取與您的工作區相同的位置。如果未列出該位置，請選擇最接近您的位置。
@@ -54,9 +54,9 @@ lab:
 
 建立計算叢集需要一些時間。 您可以在等待期間先移至下一個步驟。
 
-## <a name="create-a-pipeline-in-designer"></a>在設計工具中建立管線 
+## 在設計工具中建立管線 
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線圖示，以展開左窗格。 檢視 [設計工具] 頁面 (在 [作者] 下)，然後選取 **+** 來建立新的管線。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，展開左窗格。 檢視 [設計工具] 頁面 (在 [作者] 下)，然後選取 **+** 來建立新的管線。
 
 1. 在畫面右上方選取 [設定]。 如果看不到 [設定] 窗格，請選取頂端管線名稱旁邊的轉輪圖示。
 
@@ -64,11 +64,11 @@ lab:
 
 1. 在 [設定] 的 [草稿詳細資料] 下，將草稿名稱 (**Pipeline-Created-on-* date***) 變更為 **Auto Price Training**。
 
-1. 選取 [設定] 窗格右上方的「關閉圖示」以關閉窗格。 
+1. 選取 [**設定**] 窗格右上方的*關閉*圖示，以關閉窗格。 
 
 ![Machine Learning 工作室 [設定] 窗格的螢幕擷取畫面。](media/create-regression-model/create-pipeline-help.png)
 
-## <a name="add-and-explore-a-dataset"></a>新增與探索資料集
+## 新增與探索資料集
 
 Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
@@ -90,7 +90,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
     ![螢幕擷取畫面：設計工具畫布上的 [汽車價格資料] 資料集。](media/create-regression-model/dataset.png)
 
-## <a name="add-data-transformations"></a>新增資料轉換
+## 新增資料轉換
 
 您一般會利用資料轉換來準備要模型化的資料。 在汽車價格資料的案例中，您會新增轉換以解決在探索資料時所發現的問題。
 
@@ -130,7 +130,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 1. 按兩下 [正規化資料] 模組以檢視其參數窗格。 您會需要指定轉換方法，以及欲轉換的資料行。 將轉換方法設定為 **MinMax**。 選取 [編輯資料行] 以包含下列**資料行名稱**，藉此來套用規則：
     - **symboling** (表示符號)
     - **wheel-base** (軸距)
-    - **length**
+    - **length** (長度)
     - **寬度**
     - **height** (高度)
     - **空車重量**
@@ -147,7 +147,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
     >**提示** 如果您比較 **stroke**、**peak-rpm** 及 **city-mpg** 資料行中的值，則會發現這些值全都以不同的刻度測量，且較大的 **peak-rpm** 值可能扭曲定型演算法，還比值較小的資料行 (例如 **stroke**) 更依賴此資料行。 一般而言，資料科學家會藉由「正規化」數值資料行使其處於類似的規模，來緩和這種可能的偏差。
 
-## <a name="run-the-pipeline"></a>執行管道
+## 執行管道
 
 若要套用資料轉換，則必須執行管道。
 
@@ -169,7 +169,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
 資料集現已準備就緒，可用於模型定型。 關閉 [作業詳細資料] 索引標籤以返回管道。
 
-## <a name="create-training-pipeline"></a>建立定型管線
+## 建立定型管線
 
 使用資料轉換準備資料之後，即可使用此資料來定型機器學習模型。 請完成下列步驟以延伸 **Auto Price Training** 管線。
 
@@ -204,7 +204,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
     ![螢幕擷取畫面顯示如何分割資料，然後使用線性迴歸和分數定型](media/create-regression-model/train-score.png)
 
-## <a name="run-the-training-pipeline"></a>執行訓練管線
+## 執行訓練管線
 
 現在您已準備就緒，可執行訓練管線並定型模型。
 
@@ -220,7 +220,7 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
 模型正在預測 [price] (價格) 標籤的值，但預測的可靠程度為何？ 您必須評估模型才能評估可靠性。
 
-## <a name="evaluate-model"></a>評估模型
+## 評估模型
 
 評估回歸模型的其中一種方式是比較預測標籤與驗證資料集中的實際標籤，以便在定型期間進行保留。 另一種方式是比較多個模型的效能。
 
@@ -252,9 +252,9 @@ Azure Machine Learning 包含可用於迴歸模型的範例資料集。
 
 當找到符合需求又包含評估計量的模型時，即可準備使用該模型來處理新的資料。
 
-## <a name="create-and-run-an-inference-pipeline"></a>建立並執行推斷管線
+## 建立並執行推斷管線
 
-1. 在 Azure Machine Learning 工作室中，選取畫面左上方的三條線，以展開左窗格。 按一下 [作業] (在 [資產] 下) 以檢視您已執行的所有作業。 選取實驗 **mslearn-auto-training**，然後選取 **mslearn-auto-training** 管線。 
+1. 在Azure Machine Learning 工作室中，選取畫面左上方的功能表圖示，以展開左側窗格。 按一下 [作業] (在 [資產] 下) 以檢視您已執行的所有作業。 選取實驗 **mslearn-auto-training**，然後選取 **mslearn-auto-training** 管線。 
 
     ![螢幕擷取畫面顯示左側功能表上的作業。 選取作業，然後選取您的實驗名稱。](media/create-regression-model/jobs-tab.png)
 
@@ -304,7 +304,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     return scored_results
 ```
 
-    - 將 [評分模型] 模組的輸出連線至 [執行 Python 指令碼] 的 **Dataset1** (最左邊) 輸入，並將 [執行 Python 指令碼] 模組的輸出連線至 [Web 服務輸出]。
+1. 將 [評分模型] 模組的輸出連線至 [執行 Python 指令碼] 的 **Dataset1** (最左邊) 輸入，並將 [執行 Python 指令碼] 模組的輸出連線至 [Web 服務輸出]。
 
 1. 請確認您的管線看起來類似下列圖片：
 
@@ -318,13 +318,13 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
 推斷管線會根據車輛的特徵預測價格。 現在您已可發佈管線，供用戶端應用程式使用。
 
-## <a name="deploy-model"></a>部署模型
+## 部署模型
 
 在您建立並測試用於即時推斷得推斷管線之後，您可以將其發佈為服務，供用戶端應用程式使用。
 
 > **注意** 在此練習中，您會將 Web 服務部署至 Azure 容器執行個體 (ACI)。 此類型的計算是動態建立的，而且適用於開發及測試。 針對生產環境，您應該建立「推斷叢集」，該叢集提供可提供更佳可擴縮性與安全性的 Azure Kubernetes Service (AKS) 叢集。
 
-## <a name="deploy-a-service"></a>部署服務
+## 部署服務
 
 1. 檢視在上一個單元中建立的 **Predict Auto Price** 推斷管線。
 
@@ -343,7 +343,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
 1. 部署 Web 服務期間，請等候數分鐘。 部署狀態會顯示在設計工具介面的左上方。
 
-## <a name="test-the-service"></a>測試服務
+## 測試服務
 
 1. 在 [端點] 頁面中，開啟 **predict-auto-price** 即時端點。
 
@@ -397,15 +397,15 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
 您也測試了使用 [取用] 索引標籤中的認證、可供連線至用戶端應用程式的服務。實驗室到此結束。 歡迎繼續使用您剛才部署的服務進行實驗。
 
-## <a name="clean-up"></a>清除
+## 清除
 
-您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應停止計算執行個體，直到再次需要為止。
+您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果您不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應該刪除計算叢集。
 
 1. 在 [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true) 的 [端點] 索引標籤中，選取 [predict-auto-price] 端點。 然後，選取 [刪除]，並確認您想要刪除該端點。
 
 1. 在 [計算] 頁面的 [計算叢集]  索引標籤上，選取計算叢集，然後選取 [刪除]。
 
->**注意** 停止您的計算可確保您的訂用帳戶不需支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
+>**注意** 刪除計算可確保您的訂用帳戶不會支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
 >
 > 若要刪除您的工作區：
 >
