@@ -3,7 +3,7 @@ lab:
   title: 探索臉部辨識
 ---
 
-# <a name="explore-face-recognition"></a>探索臉部辨識
+# 探索臉部辨識
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
@@ -11,27 +11,26 @@ lab:
 
 為了測試臉部服務的功能，我們會使用 Cloud Shell 中執行的簡單命令列應用程式。 真實世界的解決方案也適用相同準則和功能，例如網站或手機應用程式。
 
-## <a name="create-a-cognitive-services-resource"></a>建立「認知服務」資源
+## 建立 *臉部 API* 資源
 
-您可以建立**臉部**資源或**認知服務**資源，以使用臉部服務。
+您可以藉由建立臉部資源來使用 **臉部** 服務。 認知服務) 已不再提供 (臉部 API
 
-如果您尚未建立上述資源，請在 Azure 訂閱中建立**認知服務**資源。
+如果您尚未這麼做，請在 Azure 訂用帳戶中建立 **臉部 API** 資源。
 
 1. 在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 
-1. 按一下 [&#65291;建立資源] 按鈕，搜尋「認知服務」，然後使用下列設定建立**認知服務**資源：
+1. 按一下 ** [&#65291;建立資源** ] 按鈕、搜尋 *臉部*，並使用下列設定建立 **臉部** 資源：
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：*選取或建立具有唯一名稱的資源群組*。
     - **區域**：選擇任何可用的區域。
-    - **名稱**：輸入唯一名稱。
-    - **定價層**:標準 S0
-    - **核取此方塊表示我已閱讀並了解下列所有條款**：選取。
+    - **名稱**：*輸入唯一名稱*。
+    - **定價層**：免費 F0
 
 1. 檢閱並建立資源，然後等候部署完成。 接著，移至所部署的資源。
 
-1. 檢視認知服務資源的 [金鑰與端點] 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
+1. 檢視臉部資源的 **[金鑰和端點** ] 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試臉部服務的功能，我們會使用 Azure Cloud Shell 中執行的簡單命令列應用程式。 
 
@@ -53,7 +52,7 @@ lab:
 
     ![等候 PowerShell 啟動。](media/create-face-solutions/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>設定和執行用戶端應用程式
+## 設定和執行用戶端應用程式
 
 現在您已擁有自訂模型，即可執行使用臉部服務的簡單用戶端應用程式。
 
@@ -79,7 +78,7 @@ lab:
 
     ![編輯器包含的程式碼能偵測影像中的臉部](media/create-face-solutions/find-faces-code.png)
 
-1. 您不用太過顧慮程式碼的細節，重要的是其需要端點 URL，以及認知服務資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
+1. 別擔心程式碼的詳細資料，重要的是它需要端點 URL 和臉部資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
 
     > **提示** 使用 [金鑰和端點] 與 [編輯器] 窗格時，您可能必須使用分隔線來調整螢幕區域。
 
@@ -133,6 +132,6 @@ lab:
 
 1. 檢閱第三個影像的臉部分析結果。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
-這個簡單的應用程式只展示了臉部服務的一些功能。 若要深入了解這項服務的功用，請參閱[人臉識別 API 頁面](https://azure.microsoft.com/services/cognitive-services/face/)。
+這個簡單的應用程式只展示了臉部服務的一些功能。 若要深入了解這項服務的功用，請參閱[人臉識別 API 頁面](https://azure.microsoft.com/en-us/products/cognitive-services/vision-services)。

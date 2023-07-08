@@ -3,7 +3,7 @@ lab:
   title: 探索知識採礦
 ---
 
-# <a name="explore-knowledge-mining"></a>探索知識採礦
+# 探索知識採礦
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
@@ -18,7 +18,7 @@ lab:
 - 查詢搜尋索引
 - 檢閱儲存至知識存放區的結果
 
-## <a name="azure-resources-needed"></a>所需的 Azure 資源
+## 所需的 Azure 資源
 
 您要為 Fourth Coffee 建立解決方案需要 Azure 訂閱中的下列資源：
 
@@ -29,7 +29,7 @@ lab:
 
 - 具備 Blob 容器的**儲存體帳戶**將會儲存原始文件和其他資料表、物件或檔案的集合。
 
-### <a name="create-an-azure-cognitive-search-resource"></a>建立 Azure 「認知搜尋」資源
+### 建立 Azure 「認知搜尋」資源
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/learn.docs.microsoft.com?azure-portal=true)。
 
@@ -45,7 +45,7 @@ lab:
 
 1. 完成部署後，選取 [前往資源]。 在 [Azure 認知搜尋概觀] 頁面上，您可以新增索引、匯入資料，並搜尋已建立的索引。
 
-### <a name="create-a-cognitive-services-resource"></a>建立認知服務資源
+### 建立認知服務資源
 
 您必須佈建與 Azure 認知搜尋資源位居相同位置的**認知服務**資源。 您的搜尋解決方案會使用該資源搭配 AI 產生的深入解析，擴充資料存放區中的資料。
 
@@ -61,7 +61,7 @@ lab:
 
 1. 等候部署完成，然後檢視部署詳細資料。
 
-### <a name="create-a-storage-account"></a>建立儲存體帳戶
+### 建立儲存體帳戶
 
 1. 返回　Azure 入口網站首頁，然後選取 [+ 建立資源] 按鈕。
 
@@ -75,7 +75,7 @@ lab:
 
 1. 按一下 [檢閱]，然後按一下 [建立]。 等候部署完成，然後移至部署的資源。
 
-## <a name="upload-documents-to-azure-storage"></a>將文件上傳至 Azure 儲存體
+## 將文件上傳至 Azure 儲存體
 
 1. 在您建立的 Azure 儲存體帳戶中，選取左側功能表窗格中的 [容器]。
 
@@ -102,7 +102,7 @@ lab:
 
 1. 完成上傳後，您可以關閉 [上傳 Blob] 窗格。 您的文件現在位於 *coffee-reviews* 儲存體容器中。
 
-## <a name="index-the-documents"></a>將文件編製索引
+## 將文件編製索引
 
 在儲存體中擁有文件後，您可以使用 Azure 認知搜尋從文件中擷取深入解析。 Azure 入口網站提供*匯入資料精靈*。 透過此精靈，您可以針對支援的資料來源自動建立索引和索引子。 您將使用精靈來建立索引，並將搜尋文件從儲存體匯入 Azure 認知搜尋索引。
 
@@ -190,7 +190,7 @@ lab:
 
     ![螢幕擷取畫面顯示 coffee-indexer 索引子已成功建立。](media/create-cognitive-search-solution/6a-search-indexer-success.png)
 
-## <a name="query-the-index"></a>查詢索引
+## 查詢索引
 
 使用搜尋總管來撰寫和測試查詢。 [搜尋總管] 是內建在 Azure 入口網站中的一個工具，可讓您輕鬆地驗證搜尋索引的品質。 您可以使用搜尋總管，用 JSON 撰寫查詢和檢閱結果。
 
@@ -206,15 +206,15 @@ lab:
 
     > **注意** 如果出現**若要在入口網站中搜尋，請在索引 CORS 設定中允許入口網站來源**訊息，請選取 [允許入口網站]，然後選取 [搜尋]。
 
-1. 現在讓我們依位置進行篩選。 在 [查詢字串] 欄位中輸入 `search=$filter=locations eq 'Chicago'`，然後選取 [搜尋]。 此查詢會搜尋索引中的所有文件，並篩選出位於芝加哥的評論。
+1. 現在讓我們依位置進行篩選。 在 [查詢字串] 欄位中輸入 `search=locations:'Chicago'`，然後選取 [搜尋]。 此查詢會搜尋索引中的所有文件，並篩選出位於芝加哥的評論。
 
-1. 現在讓我們依情緒進行篩選。 在 [查詢字串] 欄位中輸入 `search=$filter=sentiment eq 'negative'`，然後選取 [搜尋]。 查詢會搜尋索引中的所有文件，並篩選出含有負面情緒的評論。
+1. 現在讓我們依情緒進行篩選。 在 [查詢字串] 欄位中輸入 `search=sentiment:'negative'`，然後選取 [搜尋]。 查詢會搜尋索引中的所有文件，並篩選出含有負面情緒的評論。
 
    > **注意** 請看結果如何依 `@search.score` 排序。 這是搜尋引擎所指派的分數，用於表示結果與給定查詢的相符程度。
 
 1. 我們可能想要解決的問題之一，就是為何可能會出現特定評論。 讓我們看看與負面評論有關的關鍵片語。 您認為是什麼原因可能造成此評論？
 
-## <a name="review-the-knowledge-store"></a>檢閱知識存放區
+## 檢閱知識存放區
 
 讓我們看看知識存放區的運作能力。 當您執行匯入資料精靈時，也會建立知識存放區。 在知識存放區內，您會發現 AI 技能所擷取的擴充資料，會以預測和資料表的形式保存。
 
@@ -250,6 +250,6 @@ lab:
 
     查看知識存放區能夠從評論中的內容擷取的關鍵片語。 許多欄位都是金鑰，所以您可以連結資料表，例如關聯式資料庫。 最後一個欄位會顯示技能集擷取的關鍵片語。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
 這種簡單的搜尋索引僅擁有 Azure 認知搜尋服務的部分功能。 若要深入了解您可使用此服務做的事情，請參閱[Azure 認知搜尋服務頁面](/azure/search/search-what-is-azure-search)。

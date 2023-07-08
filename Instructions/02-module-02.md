@@ -3,13 +3,13 @@ lab:
   title: 探索 Azure ML 中的自動化機器學習
 ---
 
-# <a name="explore-automated-machine-learning-in-azure-ml"></a>探索 Azure ML 中的自動化機器學習
+# 探索 Azure ML 中的自動化機器學習
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
 在此練習下，您將使用自行車租借歷史詳細資料的資料集將模型定型，該模型會根據季節和氣象特徵，預測指定日期預期的自行車租借數目。
 
-## <a name="create-an-azure-machine-learning-workspace"></a>建立 Azure Machine Learning 工作區  
+## 建立 Azure Machine Learning 工作區  
 
 1. 使用您的 Microsoft 登入資訊登入 [Azure 入口網站](https://portal.azure.com?azure-portal=true)。
 
@@ -27,17 +27,15 @@ lab:
 
 1. 選取 [啟動工作室] (或開啟新的瀏覽器索引標籤，並瀏覽至 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然後使用您的 Microsoft 帳戶登入 Azure Machine Learning 工作室)。
 
-1. 如果出現**目前有哪些機器學習目標?** 訊息，請選取 [取消]。
+1. 關閉任何顯示的訊息。
 
-1. 如果出現**歡迎使用工作室!** 訊息，請選取 **X**。
-
-1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 否則，請按一下左側功能表上的 [Microsoft]。 然後，從新的左側功能表中選取 [工作區]，其中會列出與您的訂用帳戶相關聯的所有工作區。 選擇您為此練習建立的工作區。 
+1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 如果不是這種情況，請在左側功能表中選取您的 Azure 目錄。 然後，從新的左側功能表中選取 [ **工作區**]，其中會列出與您目錄相關聯的所有工作區，然後選取您為此練習建立的工作區。
 
 > **注意** 這是眾多利用 Azure Machine Learning 工作區的課程模組之一，包括 [Microsoft Azure AI 基本概念：探索機器學習的視覺工具](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/)學習路徑中的其他課程模組。 如果您使用的是您個人的 Azure 訂用帳戶，請考慮建立工作區一次，然後在其他模組中重複使用該工作區。 只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您的 Azure 訂用帳戶就會為了資料儲存空間向您收取少量的費用，因此我們建議當您不再需要 Azure Machine Learning 工作區時，將其刪除。
 
-## <a name="create-compute"></a>建立計算
+## 建立計算
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取左上方的三條線，以檢視介面中各個頁面 (您可能需要將畫面放到最大)。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取 **&#8801;圖示 (** 一個功能表圖示，其看起來像左上方三行) 堆疊，以檢視介面中的各種頁面， (您可能需要將螢幕大小最大化) 。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
 
 1. 在 [計算] 頁面上，選取 [計算叢集] 索引標籤，然後使用下列設定新增計算叢集。 您將使用此計算叢集來定型機器學習模型：
     - **位置**：選取與您的工作區相同的位置。如果未列出該位置，請選擇最接近您的位置。
@@ -51,18 +49,18 @@ lab:
     - **節點數量下限**：0
     - **節點數量上限**：2
     - **相應減少之前的閒置秒數**：120
-    - **啟用 SSH 存取**：清除
+    - **啟用 SSH 存取**：請勿啟用
     - 選取 [建立] 
 
 > **注意** 計算執行個體和叢集是以標準 Azure 虛擬機器映像為基礎。 針對本課程模組，建議使用 *Standard_DS11_v2* 映像，以達到最佳的成本與效能平衡。 如果您的訂用帳戶具有不包含此映像的配額，請選擇替代映像；但請記得，較大的映像可能會產生較高的成本，而較小的映像可能不足以完成工作。 或者，請要求您的 Azure 系統管理員擴大您的配額。
 
 建立計算叢集需要一些時間。 您可以在等待期間先移至下一個步驟。
 
-## <a name="create-a-dataset"></a>建立資料集
+## 建立資料資產
 
 1. 在網頁瀏覽器中查看逗點分隔的資料 [https://aka.ms/bike-rentals](https://aka.ms/bike-rentals?azure-portal=true)。
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線來展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
 
 1. 在 [資料] 頁面的 [資料資產] 索引標籤下，選取 [建立]。 然後使用下列設定來設定資料資產：
     * **資料類型**：
@@ -90,11 +88,11 @@ lab:
 
 > **引文**：此資料衍生自 [Capital Bikeshare](https://www.capitalbikeshare.com/system-data)，並按照已發佈的資料[授權合約](https://www.capitalbikeshare.com/data-license-agreement)來使用。
 
-## <a name="run-an-automated-machine-learning-job"></a>執行自動化機器學習作業
+## 執行自動化機器學習作業
 
 請依照下列步驟執行作業，利用自動化機器學習來定型迴歸模型，以預測自行車租借。
 
-1. 在 [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true) 中，檢視 [自動化 ML] 頁面 (位在 [作者] 下)。
+1. 在[[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)] 中，檢視 [**撰寫**) 底下的 [**自動化 ML**] 頁面 (。
 
 1. 使用下列設定建立自動化 ML 作業：
     - **選取資料資產**：
@@ -136,13 +134,12 @@ lab:
 
 1. 請等候作業完成。 這可能需要一些時間，現在或許是喝咖啡休息的好時機！
 
-## <a name="review-the-best-model"></a>檢閱最佳模型
+## 檢閱最佳模型
 
 1. 在自動化機器學習作業的 [概觀] 索引標籤上，留意最佳模型摘要。
     ![螢幕擷取畫面：自動化機器學習的最佳模型摘要，其中已框住演算法名稱。](media/use-automated-machine-learning/complete-run.png)
 
-    >[!NOTE]
-    > 您可能會在狀態下看到「警告: 使用者指定的退出分數已達到...」訊息。 這是預期的訊息。 請繼續下一個步驟。  
+    > **注意** 您可能會看到狀態為「警告：使用者指定的結束分數已達到...」的訊息。 這是預期的訊息。 請繼續下一個步驟。  
 1. 選取最佳模型 [演算法名稱] 下方的文字，以檢視其詳細資料。
 
 1. 在 [正規化均方根誤差] 值的旁邊，選取 [檢視所有其他計量] 以查看迴歸模型其他可能評估計量的值。
@@ -158,7 +155,7 @@ lab:
 
     ![螢幕擷取畫面顯示 [解釋] 索引標籤上的特徵重要度圖表。](media/use-automated-machine-learning/feature-importance.png)
 
-## <a name="deploy-a-predictive-service"></a>部署預測性服務
+## 部署預測性服務
 
 1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)的 [自動化 ML] 頁面上，選取您的自動化機器學習作業。
 
@@ -177,7 +174,7 @@ lab:
 1. 在 Azure Machine Learning 工作室中，選取左側功能表上的 [端點]。
     ![螢幕擷取畫面顯示左側功能表上的 [端點] 位置。](media/use-automated-machine-learning/find-endpoints.png)
 
-## <a name="test-the-deployed-service"></a>測試已部署的服務
+## 測試已部署的服務
 
 現在您可以測試已部署的服務。
 
@@ -221,15 +218,14 @@ lab:
 
 您剛剛測試了準備好使用 [取用] 索引標籤中的認證連線至用戶端應用程式的服務。我們將到此結束實驗室。 歡迎繼續使用您剛才部署的服務進行更多試驗。
 
-## <a name="clean-up"></a>清除
+## 清除
 
-您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應停止計算執行個體，直到再次需要為止。
+您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果您不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應該刪除計算叢集。
 
 1. 在 [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true) 的 [端點] 索引標籤上，選取 **predict-rentals** 端點。 然後，選取 [刪除]，並確認您想要刪除該端點。
-2. 在 [計算] 頁面的 [計算執行個體] 索引標籤中，選取計算執行個體，然後選取 [停止]。
+2. 在 [ **計算** ] 頁面上的 [ **計算叢集] 索引** 標籤上，選取您的計算實例，然後選取 [ **刪除**]。
 
->[!NOTE]
-> 停止您的計算可確保您的訂用帳戶不需支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
+> **注意** 刪除計算可確保您的訂用帳戶不會支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
 >
 > 若要刪除您的工作區：
 > 1. 在 [Azure 入口網站](https://portal.azure.com?azure-portal=true)的 [資源群組] 頁面中，開啟您在建立 Azure Machine Learning 工作區時所指定的資源群組。

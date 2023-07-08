@@ -3,11 +3,11 @@ lab:
   title: 使用 Azure Machine Learning 設計工具探索叢集
 ---
 
-# <a name="explore-clustering-with-azure-machine-learning-designer"></a>使用 Azure Machine Learning 設計工具探索叢集
+# 使用 Azure Machine Learning 設計工具探索叢集
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
-## <a name="create-an-azure-machine-learning-workspace"></a>建立 Azure Machine Learning 工作區  
+## 建立 Azure Machine Learning 工作區  
 
 1. 使用您的 Microsoft 登入資訊登入 [Azure 入口網站](https://portal.azure.com?azure-portal=true)。
 
@@ -25,13 +25,13 @@ lab:
 
 1. 選取 [啟動工作室] (或開啟新的瀏覽器索引標籤，並瀏覽至 [https://ml.azure.com](https://ml.azure.com?azure-portal=true)，然後使用您的 Microsoft 帳戶登入 Azure Machine Learning 工作室)。
 
-1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 否則，請按一下左側功能表上的 [Microsoft]。 然後，從新的左側功能表中選取 [工作區]，其中會列出與您的訂用帳戶相關聯的所有工作區。 選擇您為此練習建立的工作區。 
+1. 在 Azure Machine Learning 工作室中，您應該會看到新建立的工作區。 如果不是這種情況，請在左側功能表中選取您的 Azure 目錄。 然後，從新的左側功能表中選取 [ **工作區**]，其中列出與目錄相關聯的所有工作區，然後選取您為此練習建立的工作區。
 
 > **注意** 這是眾多利用 Azure Machine Learning 工作區的課程模組之一，包括 [Microsoft Azure AI 基本概念：探索機器學習的視覺工具](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/)學習路徑中的其他課程模組。 如果您使用的是您個人的 Azure 訂用帳戶，請考慮建立工作區一次，然後在其他模組中重複使用該工作區。 只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您的 Azure 訂用帳戶就會為了資料儲存空間向您收取少量的費用，因此我們建議當您不再需要 Azure Machine Learning 工作區時，將其刪除。
 
-## <a name="create-compute"></a>建立計算
+## 建立計算
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取左上方的三條線，以檢視介面中各個頁面 (您可能需要將畫面放到最大)。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取 **&#8801;** 圖示 (一個功能表圖示，其看起來像左上方三行) 堆疊，以檢視介面中的各種頁面 (您可能需要將螢幕大小最大化) 。 您可以使用左側窗格中的頁面來管理工作區中的資源。 選取 [計算] 頁面 (在 [管理] 下)。
 
 2. 在 [計算] 頁面上，選取 [計算叢集] 索引標籤，然後使用下列設定新增計算叢集。 您將使用此計算叢集來定型機器學習模型：
     - **位置**：選取與您的工作區相同的位置。如果未列出該位置，請選擇最接近您的位置。
@@ -52,11 +52,11 @@ lab:
 
 建立計算叢集需要一些時間。 您可以在等待期間先移至下一個步驟。
 
-## <a name="create-a-pipeline-in-designer"></a>在設計工具中建立管線
+## 在設計工具中建立管線
 
 若要開始使用 Azure Machine Learning 設計工具，您必須先建立管線。
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線圖示，以展開左窗格。 檢視 [設計工具] 頁面 (在 [撰寫] 下)，然後選取加號來建立新的管線。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，以展開左窗格。 檢視 [設計工具] 頁面 (在 [撰寫] 下)，然後選取加號來建立新的管線。
 
 1. 在畫面右上方，選取 [設定]。 如果看不到 [設定] 窗格，請選取頂端管線名稱旁邊的轉輪圖示。
 
@@ -68,11 +68,11 @@ lab:
 
     ![Machine Learning 工作室 [設定] 窗格的螢幕擷取畫面。](media/create-clustering-model/create-pipeline-help.png)
 
-## <a name="create-a-dataset"></a>建立資料集
+## 建立資料集
 
 在 Azure Machine Learning 中，模型定型和其他作業的資料通常會封裝在名為*資料集*的物件中。 在本課程模組中，您將使用包含三個企鵝物種觀察記錄的資料集。
 
-1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的三條線，藉此展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
+1. 在[Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)中，選取畫面左上方的功能表圖示，以展開左窗格。 檢視 [資產] 底下的 [資料] 頁面。 [資料] 頁面具有您計劃在 Azure ML 中使用的特定資料檔案或資料表。 您也可以從此頁面建立資料集。
 
 1. 在 [資料] 頁面的 [資料資產] 索引標籤下，選取 [建立]。 然後使用下列設定來設定資料資產：
     * **資料類型**：
@@ -100,7 +100,7 @@ lab:
 
 > **注意** 此練習中使用的企鵝資料集是由 [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) 和 [Palmer Station, Antarctica LTER](https://pal.lternet.edu/) ([Long Term Ecological Research Network](https://lternet.edu/) 的成員) 所收集並提供的資料子集。
 
-### <a name="load-data-to-canvas"></a>將資料載入畫布
+### 將資料載入畫布
 
 1. 選取左側功能表上的 [設計工具]，以返回您的管線。 在 [設計工具] 頁面上，選取 [Train Penguin Clustering]。
 
@@ -129,7 +129,7 @@ lab:
 
 1. 關閉資料集視覺效果，讓您可以在管線畫布上查看資料集。
 
-## <a name="apply-transformations"></a>套用轉換
+## 套用轉換
 
 1. 在左側的 [資產庫] 窗格中，按一下 [元件]，其中包含您可以用於資料轉換和模型定型的各種模組。 您也可以使用搜尋列快速找到模組。
 
@@ -168,7 +168,7 @@ lab:
 
 1. 關閉 [正規化資料] 模組設定，以回到設計工具畫布。
 
-## <a name="run-the-pipeline"></a>執行管道
+## 執行管道
 
 若要套用資料轉換，您必須以實驗形式執行管線。
 
@@ -180,7 +180,7 @@ lab:
 
     請注意，左側面板現在位於 [提交的作業] 窗格上。 您將知道執行何時完成，因為作業的狀態會變更為 [已完成]。
 
-## <a name="view-the-transformed-data"></a>檢視轉換的資料
+## 檢視轉換的資料
 
 1. 當執行完成時，資料集現在已準備好進行模型定型。 按一下 [作業詳細資料]。 您會移至另一個索引標籤，其中顯示如下的模組：
 
@@ -196,7 +196,7 @@ lab:
 
 使用資料轉換準備資料之後，即可使用此資料來定型機器學習模型。
 
-## <a name="add-training-modules"></a>新增定型模組
+## 新增定型模組
 
 逐步執行下列步驟來擴充 **Train Penguin Clustering** 管線，如下所示：
 
@@ -238,7 +238,7 @@ lab:
 
 1. 在 [資產庫] 中，搜尋 [將資料指派給叢集] 模組並將其拖曳至畫布，放在 [定型叢集模型] 模組下方。 然後將 [定型叢集模型] 模組的 [定型模型] (左側) 輸出連線至 [將資料指派給叢集]模組的 [定型模型] (左側) 輸入，並將 [分割資料] 模組的 [結果資料集 2] (右側) 輸出連線至 [將資料指派給叢集] 模組的 [資料集] (右側) 輸入。
 
-## <a name="run-the-training-pipeline"></a>執行訓練管線
+## 執行訓練管線
 
 現在您已準備就緒，可執行訓練管線並定型模型。
 
@@ -260,7 +260,7 @@ lab:
 
 評估叢集模型難以進行，因為叢集指派沒有先前已知的 *true* 值。 成功的叢集模型就是在每個叢集中項目之間實現良好分隔層級的叢集模型，因此我們需要計量來協助我們測量該區隔。
 
-## <a name="add-an-evaluate-model-module"></a>新增評估模型模組
+## 新增評估模型模組
 
 1. 開啟您在上一個單元中建立的 [定型企鵝叢集] 管線 (如果尚未開啟)。
 
@@ -286,11 +286,11 @@ lab:
 
 在建立並執行管線來定型叢集模型之後，您可以建立「推斷管線」。 推斷管線會使用模型將新的資料觀察指派給叢集。 此模型會構成預測性服務的基礎，您可以發佈此服務供應用程式使用。
 
-## <a name="create-an-inference-pipeline"></a>建立推斷管線
+## 建立推斷管線
 
-1. 在 Azure Machine Learning 工作室中，選取畫面左上方的三條線，以展開左側窗格。 按一下 [作業]  (在 [資產] 下方) 以檢視您已執行的所有作業。 選取 [mslearn-penguin-training] 實驗，然後選取 [Train Penguin Clustering] 管線。 
+1. 在Azure Machine Learning 工作室中，選取畫面左上方的功能表圖示，以展開左側窗格。 按一下 [作業]  (在 [資產] 下方) 以檢視您已執行的所有作業。 選取 [mslearn-penguin-training] 實驗，然後選取 [Train Penguin Clustering] 管線。 
 
-1. 瀏覽至畫布上方的功能表，並按一下 [建立推斷管線]。 您可能需要將畫面展開為全螢幕，並按一下畫面右上角的三個點圖示 [...] ，以在功能表中找到 [建立推斷管線]。  
+1. 瀏覽至畫布上方的功能表，並按一下 [建立推斷管線]。 您可能需要將畫面展開為 [已滿]，然後按一下畫面右上角的 **...** 圖示，才能在功能表中尋找 **[建立推斷管線** ]。  
 
     ![螢幕擷取畫面顯示 [建立推斷管線] 的位置。](media/create-clustering-model/create-inference-pipeline.png) 
 
@@ -303,13 +303,13 @@ lab:
     ![螢幕擷取畫面：對管線所做的變更，包括要新增和移除的元件以紅色標示。](media/create-clustering-model/inference-changes.png)
 
     - 針對要提交的新資料，新增 **Web 服務輸入**元件。
-    - 將 **penguin-data** 資料集取代為 [手動輸入資料] 模組，其中未包含 [物種] 資料行。
-    - 移除 [選取資料集中的資料行] 模組，現在這是多餘的動作。
-    - 將 [Web 服務輸入] 和 [手動輸入資料] 模組 (代表要叢集化的資料輸入) 連線至第一個 [套用轉換] 模組。
+    - 將**penguin-data**資料集取代為不包含 [物種] 資料行的 **[手動輸入資料****]** 元件。
+    - 移除 [ **選取資料集中的資料行]** 元件，此元件現在是多餘的。
+    - 將 **Web 服務輸入** 和 **輸入資料手動** 元件 (，代表要叢集的資料輸入) 到第一個 **套用轉換** 元件。
 
     請遵循以下的其餘步驟，並在修改管線時參考上方的影像和資訊。
 
-1. 針對從自訂資料集建立的模型，管線不會自動包含 **Web 服務輸入**元件。 從資產庫搜尋 **Web 服務輸入**元件，並放在管線頂端。 將 [Web 服務輸入] 元件的輸出，連線至已在畫布上的 [套用轉換] 元件的右側輸入。  
+1. 針對從自訂資料集建立的模型，管線不會自動包含 **Web 服務輸入**元件。 從資產庫搜尋 **Web 服務輸入**元件，並放在管線頂端。  將 **Web 服務輸入** 元件的輸出連接到畫布上已套 **用轉換** 元件的輸入。  
 
 1. 推斷管線假設新資料會符合原始訓練資料的結構描述，所以包含來自訓練管線的 **penguin-data** 資料集。 不過，此輸入資料包含企鵝物種的資料行，模型不會使用此資料行。 同時刪除 **penguin-data** 資料集和 [選取資料集中的資料行] 模組，並將其取代為來自 [資產庫] 的 [手動輸入資料] 模組。 然後修改 [手動輸入資料] 模組的設定，以使用下列 CSV 輸入，其中包含三個新企鵝觀察的特徵值 (包括標頭)：
 
@@ -336,7 +336,7 @@ lab:
 
 >**注意** 在此練習中，您會將 Web 服務部署至 Azure 容器執行個體 (ACI)。 此類型的計算是動態建立的，而且適用於開發及測試。 針對生產環境，您應該建立*推斷叢集*，該叢集可提供更佳可擴縮性與安全性的 Azure Kubernetes Service (AKS) 叢集。
 
-## <a name="deploy-a-service"></a>部署服務
+## 部署服務
 
 1. 檢視您在上一個單元中建立的 [預測企鵝叢集] 推斷管線。
 
@@ -355,9 +355,9 @@ lab:
 
 1. 等待系統部署 Web 服務 - 這可能需要幾分鐘的時間。 
 
-1. 若要檢視部署狀態，請選取畫面左上方的三條線來展開左窗格。 檢視 [資產] 頁面 (在 [端點] 下)，然後選取 [predict-penguin-clusters]。 部署完成時，[部署狀態] 會變成 [良好]。
+1. 若要檢視部署狀態，請選取畫面左上方的功能表圖示，展開左窗格。 檢視 [資產] 頁面 (在 [端點] 下)，然後選取 [predict-penguin-clusters]。 部署完成時，[部署狀態] 會變成 [良好]。
 
-## <a name="test-the-service"></a>測試服務
+## 測試服務
 
 1. 在 [端點] 頁面上，開啟 **predict-penguin-clusters** 即時端點，然後選取 [測試] 索引標籤。
 
@@ -389,15 +389,15 @@ lab:
 
 您已測試使用 [取用] 索引標籤中的認證、可供連線至用戶端應用程式的服務。實驗室到此結束。 歡迎繼續使用您剛才部署的服務進行更多試驗。
 
-## <a name="clean-up"></a>清除
+## 清除
 
-您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應停止計算執行個體，直到再次需要為止。
+您建立的 Web 服務會裝載在 *Azure 容器執行個體*中。 如果您不打算進一步試驗此服務，則應刪除端點，以避免產生不必要的 Azure 使用量。 您也應該刪除計算叢集。
 
 1. 在 [Azure Machine Learning 工作室](https://ml.azure.com?azure-portal=true)的 [端點] 索引標籤上，選取 [predict-penguin-clusters] 端點。 然後選取 [刪除] (&#128465;)，並確認您想要刪除此端點。
 
 1. 在 [計算] 頁面的 [計算叢集]  索引標籤上，選取計算叢集，然後選取 [刪除]。
 
->**注意** 停止您的計算可確保您的訂用帳戶不需支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
+>**注意** 刪除計算可確保您的訂用帳戶不會支付計算資源的費用。 不過，只要您的訂用帳戶中具有 Azure Machine Learning 工作區，您就必須為了資料儲存空間支付少許的費用。 如果您已完成探索 Azure Machine Learning，則可刪除 Azure Machine Learning 工作區及其相關的資源。 但是，如果您打算完成本系列中的任何其他實驗室，您將需要重新建立 Azure Machine Learning 工作區。
 >
 > 若要刪除您的工作區：
 >
