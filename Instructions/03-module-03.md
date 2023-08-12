@@ -3,7 +3,7 @@ lab:
   title: 探索電腦視覺
 ---
 
-# <a name="explore-computer-vision"></a>探索電腦視覺
+# 探索電腦視覺
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
@@ -13,7 +13,7 @@ lab:
 
 在此實驗室中，您將使用簡單的命令列應用程式，查看電腦視覺服務運作情形。 真實世界的解決方案也適用相同準則與功能，例如網站或手機應用程式。
 
-## <a name="create-a-cognitive-services-resource"></a>建立「認知服務」資源
+## 建立「認知服務」資源
 
 您可以建立 [電腦視覺] 資源或 [認知服務] 資源，使用電腦視覺服務。
 
@@ -33,7 +33,7 @@ lab:
 
 1. 檢視認知服務資源的 [金鑰與端點] 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試電腦視覺服務的功能，我們會使用在 Azure 上 Cloud Shell 中執行的簡單命令列應用程式。
 
@@ -55,7 +55,7 @@ lab:
 
     ![等候 PowerShell 啟動。](media/analyze-images-computer-vision-service/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>設定及執行用戶端應用程式
+## 設定及執行用戶端應用程式
 
 既然您已擁有 Cloud Shell 環境，接下來，您可以執行簡單的應用程式，使用電腦視覺服務來分析影像。
 
@@ -134,6 +134,6 @@ lab:
 
 1. 檢閱第三張影像的影像分析結果。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
-此簡單的應用程式只說明電腦視覺服務的部分功能。 若要深入了解此服務的功能，請參閱[電腦視覺頁面](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
+此簡單的應用程式只說明電腦視覺服務的部分功能。 若要深入了解此服務的功能，請參閱[電腦視覺頁面](https://azure.microsoft.com/products/ai-services?activetab=pivot:visiontab)。
