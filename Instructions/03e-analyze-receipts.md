@@ -3,7 +3,7 @@ lab:
   title: 探索表單辨識
 ---
 
-# <a name="explore-form-recognition"></a>探索表單辨識
+# 探索表單辨識
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
@@ -15,15 +15,15 @@ lab:
 
 為了測試表格辨識器服務的功能，我們會使用 Cloud Shell 中執行的簡單命令列應用程式。 真實世界的解決方案也適用相同準則與功能，例如網站或手機應用程式。
 
-## <a name="create-a-cognitive-services-resource"></a>建立「認知服務」資源
+## 建立 *Azure AI 服務* 資源
 
-您可以建立 [表格辨識器] 資源或 [認知服務] 資源，以使用表格辨識器服務。
+您可以建立表格辨識器資源或**Azure AI 服務**資源，以使用**表格辨識器**服務。
 
-如果您尚未建立上述資源，請在 Azure 訂用帳戶中建立**認知服務**資源。
+如果您尚未這麼做，請在 Azure 訂用帳戶中建立 **Azure AI 服務** 資源。
 
 1. 在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 
-1. 按一下 [&#65291;建立資源] 按鈕，搜尋「認知服務」，然後使用下列設定建立**認知服務**資源：
+1. 按一下 ** [&#65291;[建立資源]** 按鈕，然後搜尋 *Azure AI 服務*。 選取 **[建立** **Azure AI 服務** 方案]。 系統會帶您前往頁面來建立 Azure AI 服務資源。 使用下列設定進行設定：
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：*選取或建立具有唯一名稱的資源群組*。
     - **區域**：選擇任何可用的區域。
@@ -33,9 +33,9 @@ lab:
 
 1. 檢閱並建立資源，然後等候部署完成。 接著，移至所部署的資源。
 
-1. 檢視認知服務資源的 [金鑰與端點] 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
+1. 檢視 Azure AI 服務資源的 **[金鑰和端點]** 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試表格辨識器服務的功能，我們會使用 Azure Cloud Shell 中執行的簡單命令列應用程式。 
 
@@ -57,7 +57,7 @@ lab:
 
     ![等候 PowerShell 啟動。](media/analyze-receipts/powershell-prompt.png) 
 
-## <a name="configure-and-run-a-client-application"></a>設定和執行用戶端應用程式
+## 設定和執行用戶端應用程式
 
 現在您已擁有自訂模型，即可執行使用表格辨識器服務的簡單用戶端應用程式。
 
@@ -83,7 +83,7 @@ lab:
 
     ![編輯器包含程式碼來分析收據中的欄位。](media/analyze-receipts/recognize-receipt-code.png)
 
-1. 您不用太過顧慮程式碼的細節，重要的是其需要端點 URL，以及認知服務資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
+1. 別擔心程式碼的詳細資料，重要的是它需要端點 URL 和 Azure AI 服務資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
 
     > **提示** 使用 [金鑰和端點] 與 [編輯器] 窗格時，您可能必須使用分隔線來調整螢幕區域。
 
@@ -109,6 +109,6 @@ lab:
 
 1. 檢閱所傳回的結果。 知悉表格辨識器能夠解譯表單中的資料、正確識別商家地址和電話號碼，以及交易日期和時間，還有商品明細、小計、稅金和總金額。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
 此簡單的應用程式只說明部分電腦視覺服務的表單辨識器功能。 若要深入了解這項服務的功用，請參閱[表單辨識器頁面](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/overview)。

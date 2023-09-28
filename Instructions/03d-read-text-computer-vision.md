@@ -3,7 +3,7 @@ lab:
   title: 探索光學字元辨識
 ---
 
-# <a name="explore-optical-character-recognition"></a>探索光學字元辨識
+# 探索光學字元辨識
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
@@ -11,21 +11,21 @@ lab:
 
 為了測試讀取 API 的功能，我們將使用在 Cloud Shell 中執行的簡單命令列應用程式。 真實世界的解決方案也適用相同準則與功能，例如網站或手機應用程式。
 
-## <a name="use-the-computer-vision-service-to-read-text-in-an-image"></a>使用電腦視覺服務讀取影像中的文字
+## 使用 Azure AI 視覺服務讀取影像中的文字
 
-**電腦視覺**認知服務提供 OCR 工作的支援，包括：
+**Azure AI 視覺**服務提供 OCR 工作的支援，包括：
 
 - 針對較大型文件最佳化的**讀取** API。 您可以非同步方式使用此 API，並可將 API 用於列印和手寫文字。
 
-## <a name="create-a-cognitive-services-resource"></a>建立*認知服務*資源
+## 建立 *Azure AI 服務* 資源
 
-您可以建立 [電腦視覺] 資源或 [認知服務] 資源，使用電腦視覺服務。
+您可以建立**電腦視覺**資源或**Azure AI 服務**資源，以使用 Azure AI 視覺服務。
 
-如果您尚未建立上述資源，請在 Azure 訂用帳戶中建立**認知服務**資源。
+如果您尚未這麼做，請在 Azure 訂用帳戶中建立 **Azure AI 服務** 資源。
 
 1. 在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 
-1. 按一下 [&#65291;建立資源] 按鈕，搜尋「認知服務」，然後使用下列設定建立**認知服務**資源：
+1. 按一下 ** [&#65291;[建立資源]** 按鈕，然後搜尋 *Azure AI 服務*。 選取 **[建立** **Azure AI 服務** 方案]。 系統會帶您前往頁面來建立 Azure AI 服務資源。 使用下列設定進行設定：
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：*選取或建立具有唯一名稱的資源群組*。
     - **區域**：選擇任何可用的區域。
@@ -35,9 +35,9 @@ lab:
 
 1. 檢閱並建立資源，然後等候部署完成。 接著，移至所部署的資源。
 
-1. 檢視認知服務資源的 [金鑰與端點] 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
+1. 檢視 Azure AI 服務資源的 **[金鑰和端點]** 頁面。 您需要有端點和金鑰，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試自訂視覺服務的功能，我們會使用在 Azure 上的 Cloud Shell 中執行的簡單命令列應用程式。
 
@@ -59,7 +59,7 @@ lab:
 
     ![等候 PowerShell 啟動。](media/read-text-computer-vision/powershell-prompt.png) 
 
-## <a name="configure-and-run-a-client-application"></a>設定和執行用戶端應用程式
+## 設定和執行用戶端應用程式
 
 現在您已擁有自訂模型，即可執行使用 OCR 服務的簡單用戶端應用程式。
 
@@ -85,7 +85,7 @@ lab:
 
     ![編輯器包含程式碼來分析影像中的文字。](media/read-text-computer-vision/ocr-code.png)
 
-1. 您不用太過顧慮程式碼的細節，重要的是其需要端點 URL，以及認知服務資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
+1. 別擔心程式碼的詳細資料，重要的是它需要端點 URL 和 Azure AI 服務資源的其中一個金鑰。 從 Azure 入口網站資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
 
     > **提示** 使用 [金鑰和端點] 與 [編輯器] 窗格時，您可能必須使用分隔線來調整螢幕區域。
 
@@ -96,7 +96,7 @@ lab:
     $endpoint="https..."
     ```
 
-1. 在編輯器窗格右上方，使用 [...] 按鈕開啟功能表，然後選取 [儲存] 以儲存變更。 然後再次開啟功能表，並選取 [關閉編輯器]。 現在您已設定金鑰和端點，即可使用認知服務資源來擷取影像中的文字。
+1. 在編輯器窗格右上方，使用 [...] 按鈕開啟功能表，然後選取 [儲存] 以儲存變更。 然後再次開啟功能表，並選取 [關閉編輯器]。 既然您已設定金鑰和端點，您可以使用 Azure AI 服務資源從影像中擷取文字。
 
     讓我們使用**讀取** API。 在此案例中，您有虛構 Northwind Traders 零售公司的廣告影像，其中包含一些文字。
 
@@ -129,6 +129,6 @@ lab:
 
 1. 檢閱第二個影像的分析結果。 其也應該傳回文字和文字的周框方塊。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
 這個簡單的應用程式只說明電腦視覺服務的部分 OCR 功能。 若要深入了解這項服務的功用，請參閱 [OCR 頁面](https://docs.microsoft.com/azure/cognitive-services/computer-vision/overview-ocr)。
