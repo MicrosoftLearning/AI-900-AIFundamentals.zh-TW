@@ -3,27 +3,27 @@ lab:
   title: 探索文字分析
 ---
 
-# <a name="explore-text-analytics"></a>探索文字分析
+# 探索文字分析
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
 自然語言處理 (NLP) 是人工智慧 (AI) 的分支，負責處理書寫或口語語言。 您可以使用 NLP 來建置解決方案，以從文字或語音擷取語意，或以自然語言撰寫有意義的回應。
 
-Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其提供一些現成可用的 NLP 功能，包括識別文字中的關鍵字組，以及根據情感的文字分類。
+Microsoft *Azure AI 服務* 包含 *語言* 服務中的文字分析功能，其提供一些現用 NLP 功能，包括文字中關鍵字組的識別，以及根據情感的文字分類。
 
 例如，假設虛構的 *Margie's Travel* 組織鼓勵客戶提交旅館住宿的評論。 您可以使用語言服務來摘要評論，方法是擷取關鍵字組、判斷哪些評論為正面和負面，或分析檢閱文字中是否有提及已知實體，例如地點或人。
 
 為了測試語言服務的功能，我們會使用在 Cloud Shell 中執行的簡單命令列應用程式。 真實世界的解決方案也適用相同準則與功能，例如網站或手機應用程式。
 
-## <a name="create-a-cognitive-services-resource"></a>建立*認知服務*資源
+## 建立 *Azure AI 服務* 資源
 
-您可以建立**語言**資源或**認知服務**資源，以使用語言服務。
+您可以建立語言資源或**Azure AI 服務**資源，以使用**語言**服務。
 
-如果您尚未建立上述資源，請在 Azure 訂用帳戶中建立**認知服務**資源。
+如果您尚未這麼做，請在 Azure 訂用帳戶中建立 **Azure AI 服務** 資源。
 
 1. 在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 
-1. 選取 [&#65291;建立資源] 按鈕，搜尋「認知服務」，然後使用下列設定建立**認知服務**資源：
+1. 按一下 ** [&#65291;建立資源** ] 按鈕，然後搜尋 *Azure AI 服務*。 選取 **[建立** **Azure AI 服務** 方案]。 系統會帶您前往頁面來建立 Azure AI 服務資源。 使用下列設定進行設定：
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：*選取或建立具有唯一名稱的資源群組*。
     - **區域**：選擇任何可用的區域。
@@ -33,13 +33,13 @@ Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其
 
 1. 檢閱並建立資源。
 
-### <a name="get-the-key-and-endpoint-for-your-cognitive-services-resource"></a>取得認知服務資源的金鑰和端點
+### 取得 Azure AI 服務資源的金鑰和端點
 
-1. 等候部署完成。 接下來，移至您的認知服務資源，在 [概觀] 頁面上選取管理服務金鑰的連結。 您需要端點和金鑰，才能從用戶端應用程式連線到認知服務資源。
+1. 等候部署完成。 然後移至您的 Azure AI 服務資源，然後在 [概 **觀** ] 頁面上，選取連結來管理服務的金鑰。 您需要端點和金鑰，才能從用戶端應用程式連線到 Azure AI 服務資源。
 
 1. 檢視資源的 [金鑰和端點] 頁面。 您需要**金鑰**和**端點**，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試語言服務的文字分析功能，我們將使用在 Azure 上的 Cloud Shell 中執行的簡單命令列應用程式。
 
@@ -61,7 +61,7 @@ Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其
 
     ![等候 PowerShell 啟動。](media/analyze-text-language-service/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>設定和執行用戶端應用程式
+## 設定和執行用戶端應用程式
 
 現在您已擁有自訂模型，您可以執行使用語言服務的簡單用戶端應用程式。
 
@@ -87,11 +87,11 @@ Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其
 
     ![編輯器包含使用語言服務的程式碼](media/analyze-text-language-service/analyze-text-code.png)
 
-1. 不用太過顧慮程式碼的細節。 在入口網站中，瀏覽至您的認知服務資源。 然後選取左側窗格中的 [金鑰和端點] 頁面。 從該頁面複製金鑰和端點，並將其貼上到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
+1. 不用太過顧慮程式碼的細節。 在Azure 入口網站中，流覽至您的 Azure AI 服務資源。 然後選取左側窗格中的 [金鑰和端點] 頁面。 從該頁面複製金鑰和端點，並將其貼上到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_ENDPOINT** 預留位置值。
 
     > **提示** 使用 [金鑰和端點] 與 [編輯器] 窗格時，您可能必須使用分隔線來調整螢幕區域。
 
-    ![在認知服務資源的左側窗格中尋找 [金鑰和端點] 索引標籤。](media/analyze-text-language-service/key-endpoint-support.png)
+    ![在 Azure AI 服務資源的左窗格中尋找 [金鑰和端點] 索引標籤。](media/analyze-text-language-service/key-endpoint-support.png)
 
     在取代金鑰和端點值之後，程式碼的前幾行應該會類似以下：
 
@@ -102,7 +102,7 @@ Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其
 
 1. 在編輯器窗格右上方，使用 [...] 按鈕開啟功能表，然後選取 [儲存] 以儲存變更。 然後再次開啟功能表，並選取 [關閉編輯器]。
 
-    範例用戶端應用程式將使用認知服務的語言服務來偵測語言、擷取關鍵字組、判斷情感，以及擷取已知實體以進行檢閱。
+    範例用戶端應用程式會使用 Azure AI 服務的語言服務來偵測語言、擷取關鍵字組、判斷情感，以及擷取已知實體以進行檢閱。
 
 1. 在 Cloud Shell 中，輸入下列命令以執行程式碼：
 
@@ -154,6 +154,6 @@ Microsoft Azure *認知服務*包含*語言*服務中的文字分析功能，其
 
 1. 檢閱輸出。
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
 這個簡單的應用程式只會展現語言服務的一些功能。 若要深入了解您可以使用此服務完成的動作，請參閱[語言服務頁面](https://azure.microsoft.com/services/cognitive-services/language-service/)。

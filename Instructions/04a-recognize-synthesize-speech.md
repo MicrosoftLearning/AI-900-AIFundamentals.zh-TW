@@ -3,25 +3,25 @@ lab:
   title: 探索語音
 ---
 
-# <a name="explore-speech"></a>探索語音
+# 探索語音
 
 > **注意** 若要完成此實驗室，您需要一個具備[系統管理存取權](https://azure.microsoft.com/free?azure-portal=true)的 Azure 訂用帳戶。
 
-若要建置可適當解譯語音和回應的軟體，您可以使用**語音**認知服務，其提供了簡單的方式將口語語言轉譯成文字，反之亦然。
+若要建置可解譯語音並適當回應的軟體，您可以使用 **Azure AI 語音** 服務，其提供將口語轉譯成文字的簡單方式，反之亦然。
 
 例如，假設您想要建立能出聲回答口頭問題的智慧型裝置，例如「現在幾點了？」 應該回答當地時間。
 
 為了測試語音服務的功能，我們會使用 Cloud Shell 中執行的簡單命令列應用程式。 真實世界的解決方案也適用相同準則與功能，例如網站或手機應用程式。
 
-## <a name="create-a-cognitive-services-resource"></a>建立*認知服務*資源
+## 建立 *Azure AI 服務* 資源
 
-您可以建立**語音**資源或**認知服務**資源，以使用語音服務。
+您可以建立語音資源或**Azure AI 服務**資源，以使用**語音**服務。
 
-如果您尚未建立上述資源，請在 Azure 訂用帳戶中建立**認知服務**資源。
+如果您尚未這麼做，請在 Azure 訂用帳戶中建立 **Azure AI 服務** 資源。
 
 1. 在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 
-1. 按一下 [&#65291;建立資源] 按鈕，搜尋「認知服務」，然後使用下列設定建立**認知服務**資源：
+1. 按一下 ** [&#65291;[建立資源]** 按鈕，然後搜尋 *Azure AI 服務*。 選取 **[建立** **Azure AI 服務** 方案]。 系統會帶您前往頁面來建立 Azure AI 服務資源。 使用下列設定進行設定：
     - **訂用帳戶**：*您的 Azure 訂用帳戶*。
     - **資源群組**：*選取或建立具有唯一名稱的資源群組*。
     - **區域**：選擇任何可用的區域。
@@ -31,13 +31,13 @@ lab:
 
 1. 檢閱並建立資源。
 
-### <a name="get-the-key-and-location-for-your-cognitive-services-resource"></a>取得認知服務資源的金鑰和位置
+### 取得 Azure AI 服務資源的金鑰和位置
 
-1. 等候部署完成。 接下來，移至您的認知服務資源，在 [概觀] 頁面上按一下管理服務金鑰的連結。 您需要端點和金鑰，才能從用戶端應用程式連線到認知服務資源。
+1. 等候部署完成。 然後移至您的 Azure AI 服務資源，然後在 [ **概觀** ] 頁面上，按一下連結來管理服務的金鑰。 您需要端點和金鑰，才能從用戶端應用程式連線到您的 Azure AI 服務資源。
 
 1. 檢視資源的 [金鑰和端點] 頁面。 您需要**位置/區域**和**金鑰**，才能從用戶端應用程式連線。
 
-## <a name="run-cloud-shell"></a>執行 Cloud Shell
+## 執行 Cloud Shell
 
 為了測試語音服務的功能，我們會使用在 Azure 上的 Cloud Shell 中執行的簡單命令列應用程式。
 
@@ -59,7 +59,7 @@ lab:
 
     ![等候 PowerShell 啟動。](media/recognize-synthesize-speech/powershell-prompt.png)
 
-## <a name="configure-and-run-a-client-application"></a>設定和執行用戶端應用程式
+## 設定和執行用戶端應用程式
 
 現在您已擁有自訂模型，即可執行使用語音服務的簡單用戶端應用程式。
 
@@ -85,7 +85,7 @@ lab:
 
     ![編輯器包含程式碼來使用語音服務](media/recognize-synthesize-speech/speaking-clock-code.png)
 
-1. 您不用太過顧慮程式碼的細節，重要的是它需要區域/位置，以及認知服務資源的其中一個金鑰。 在 Azure 入口網站中，從資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_LOCATION** 預留位置值。
+1. 別擔心程式碼的詳細資料，重要的是它需要區域/位置，以及 Azure AI 服務資源的其中一個金鑰。 在 Azure 入口網站中，從資源的 [金鑰和端點] 頁面複製上述資訊，並貼到程式碼編輯器中，分別取代 **YOUR_KEY** 和 **YOUR_LOCATION** 預留位置值。
 
     > **提示** 使用 [金鑰和端點] 與 [編輯器] 窗格時，您可能必須使用分隔線來調整螢幕區域。
 
@@ -117,6 +117,6 @@ lab:
 
     <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWMSIU" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
 
-## <a name="learn-more"></a>深入了解
+## 深入了解
 
 這個簡單的應用程式只展示了語音服務的一些功能。 若要深入了解這項服務的功用，請參閱[語音頁面](https://azure.microsoft.com/services/cognitive-services/speech-services/)。
