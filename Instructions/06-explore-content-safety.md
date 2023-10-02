@@ -7,6 +7,8 @@ Content Safety Studio 可讓您探索如何仲裁文字和影像內容。 您可
 
 在此實驗室練習中，您將在Azure 入口網站中建立多服務 Azure AI 服務資源，並檢查其端點和金鑰。 接著，您將使用 Content Safety Studio 來探索 Content Safety AI 服務的功能。 
 
+> **注意** 本練習的目標是要大致瞭解如何布建及使用 Azure AI 服務。 內容安全會作為範例使用，但您不預期在此練習中取得內容安全性的完整知識！
+
 ## 建立 AI 服務資源
 
 1.  在另一個瀏覽器索引標籤中，開啟位於 [https://portal.azure.com](https://portal.azure.com?azure-portal=true) 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
@@ -20,6 +22,8 @@ Content Safety Studio 可讓您探索如何仲裁文字和影像內容。 您可
 
 ## 將資源與 Content Safety Studio 產生關聯 
 在不同的瀏覽器索引標籤中，開啟 Content Safety Studio 並登入。 [開始使用] 畫面隨即顯示。
+
+![內容安全工作室登陸頁面的螢幕擷取畫面。](./media/content-safety/content-safety-getting-started.png)
 
 1.  按一下右上方功能表上的 [設定] 齒輪。
 2.  選取您剛才建立的 Azure AI 服務資源，然後按一下 [使用資源]。
